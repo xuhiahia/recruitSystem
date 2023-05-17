@@ -1,2 +1,2 @@
 ## 毕业生招聘系统
-包含用户，学生，企业
+This is a simple student recruitment system that can support communication between users and businesses, and businesses support the posting of recruitment tasks and recruitment information. Users can post threads
