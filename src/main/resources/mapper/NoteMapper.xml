@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.NoteMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.Note">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="noteDescription" column="note_description" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="academicDegree" column="academic_degree" jdbcType="VARCHAR"/>
+            <result property="jobStatus" column="job_status" jdbcType="TINYINT"/>
+            <result property="graduateYear" column="graduate_year" jdbcType="VARCHAR"/>
+            <result property="graduateSchool" column="graduate_school" jdbcType="VARCHAR"/>
+            <result property="noteEducation" column="note_education" jdbcType="VARCHAR"/>
+            <result property="noteItem" column="note_item" jdbcType="VARCHAR"/>
+            <result property="noteExpect" column="note_expect" jdbcType="VARCHAR"/>
+            <result property="noteWork" column="note_work" jdbcType="VARCHAR"/>
+            <result property="noteUrl" column="note_url" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,note_description,user_id,
+        academic_degree,job_status,graduate_year,
+        graduate_school,note_education,note_item,
+        note_expect,note_work,create_time,
+        update_time,note_url
+    </sql>
+</mapper>

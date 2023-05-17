@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.CompanyMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.Company">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="role" column="role" jdbcType="TINYINT"/>
+            <result property="companyAccount" column="company_account" jdbcType="VARCHAR"/>
+            <result property="companyPwd" column="company_pwd" jdbcType="VARCHAR"/>
+            <result property="companyName" column="company_name" jdbcType="VARCHAR"/>
+            <result property="companyIndustry" column="company_industry" jdbcType="VARCHAR"/>
+            <result property="scale" column="scale" jdbcType="TINYINT"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="companyEmail" column="company_email" jdbcType="VARCHAR"/>
+            <result property="companyPhone" column="company_phone" jdbcType="VARCHAR"/>
+            <result property="companyStatus" column="company_status" jdbcType="TINYINT"/>
+            <result property="mark" column="mark" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+            <result property="companyAvatar" column="company_avatar" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+
+    <sql id="Base_Column_List">
+        id,role,company_account,
+        company_pwd,company_name,company_industry,
+        scale,address,company_email,
+        company_phone,company_status,mark,
+        create_time,update_time,is_delete,
+        company_avatar
+    </sql>
+</mapper>

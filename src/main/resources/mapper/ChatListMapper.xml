@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.ChatListMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.ChatList">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userChatId" column="user_chat_id" jdbcType="BIGINT"/>
+            <result property="sendUser" column="send_user" jdbcType="BIGINT"/>
+            <result property="receiveUser" column="receive_user" jdbcType="BIGINT"/>
+            <result property="sendWindow" column="send_window" jdbcType="TINYINT"/>
+            <result property="receiveWindow" column="receive_window" jdbcType="TINYINT"/>
+            <result property="unread" column="unread" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_chat_id,send_user,
+        receive_user,send_window,receive_window,
+        unread,status,create_time,
+        update_time
+    </sql>
+</mapper>

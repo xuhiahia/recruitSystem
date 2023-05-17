@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.ChiefMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.Chief">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="companyId" column="company_id" jdbcType="BIGINT"/>
+            <result property="chiefSalary" column="chief_salary" jdbcType="VARCHAR"/>
+            <result property="chiefAddress" column="chief_address" jdbcType="VARCHAR"/>
+            <result property="chiefDescription" column="chief_description" jdbcType="VARCHAR"/>
+            <result property="chiefCommand" column="chief_command" jdbcType="VARCHAR"/>
+            <result property="chiefName" column="chief_name" jdbcType="VARCHAR"/>
+            <result property="chiefTime" column="chief_time" jdbcType="VARCHAR"/>
+            <result property="chiefHc" column="chief_hc" jdbcType="INTEGER"/>
+            <result property="chiefRealHc" column="chief_real_hc" jdbcType="INTEGER"/>
+            <result property="chiefStatus" column="chief_status" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,company_id,chief_salary,
+        chief_address,chief_description,chief_command,
+        chief_name,chief_time,chief_hc,
+        chief_real_hc,chief_status,create_time,
+        update_time
+    </sql>
+</mapper>

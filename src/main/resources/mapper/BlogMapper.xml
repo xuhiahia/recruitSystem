@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.BlogMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.Blog">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="blogContent" column="blog_content" jdbcType="VARCHAR"/>
+            <result property="blogTitle" column="blog_title" jdbcType="VARCHAR"/>
+            <result property="blogImages" column="blog_images" jdbcType="VARCHAR"/>
+            <result property="blogComments" column="blog_comments" jdbcType="INTEGER"/>
+            <result property="blogLikes" column="blog_likes" jdbcType="INTEGER"/>
+            <result property="blogCollections" column="blog_collections" jdbcType="INTEGER"/>
+            <result property="blogStatus" column="blog_status" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="blogType" column="blog_type" jdbcType="VARCHAR"/>
+            <result property="blogShares" column="blog_shares" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,blog_content,
+        blog_title,blog_images,blog_comments,
+        blog_likes,blog_collections,blog_status,
+        create_time,update_time,blog_type,
+            blog_shares
+    </sql>
+</mapper>

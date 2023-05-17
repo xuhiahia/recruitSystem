@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.UserChiefMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.UserChief">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="companyId" column="company_id" jdbcType="BIGINT"/>
+            <result property="chiefId" column="chief_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="userChiefStatus" column="user_chief_status" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,company_id,chief_id,
+        user_id,user_chief_status,create_time,
+        update_time
+    </sql>
+    
+    <select id="queryUC" resultType="com.fzy.project.model.entity.UserChief">
+        select * from user_chief  JOIN chief ON chief.chief_name LIKE "%#{chiefName}%" AND user_chief.company_id=#{companyId};
+    </select>
+</mapper>

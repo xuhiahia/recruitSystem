@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.AdminsMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.Admins">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="role" column="role" jdbcType="TINYINT"/>
+            <result property="adminAccount" column="admin_account" jdbcType="VARCHAR"/>
+            <result property="adminPwd" column="admin_pwd" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="adminAvatar" column="admin_avatar" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,role,admin_account,
+        admin_pwd,create_time,update_time,
+        admin_avatar
+    </sql>
+</mapper>

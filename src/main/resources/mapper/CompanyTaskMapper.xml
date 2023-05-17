@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzy.project.mapper.CompanyTaskMapper">
+
+    <resultMap id="BaseResultMap" type="com.fzy.project.model.entity.CompanyTask">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="companyId" column="company_id" jdbcType="BIGINT"/>
+            <result property="taskTitle" column="task_title" jdbcType="VARCHAR"/>
+            <result property="taskContent" column="task_content" jdbcType="VARCHAR"/>
+            <result property="taskCommand" column="task_command" jdbcType="VARCHAR"/>
+            <result property="taskStatus" column="task_status" jdbcType="TINYINT"/>
+            <result property="taskType" column="task_type" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,company_id,task_title,
+        task_content,task_command,task_status,
+        task_type,create_time,update_time
+    </sql>
+</mapper>
