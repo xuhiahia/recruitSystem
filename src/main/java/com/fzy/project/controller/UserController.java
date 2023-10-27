@@ -1,8 +1,5 @@
 package com.fzy.project.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
 import com.fzy.project.common.BaseResponse;
 import com.fzy.project.common.DeleteRequest;
 import com.fzy.project.common.ErrorCode;
@@ -11,8 +8,6 @@ import com.fzy.project.exception.BusinessException;
 import com.fzy.project.model.dto.note.NoteUpdateRequest;
 import com.fzy.project.model.dto.user.*;
 import com.fzy.project.model.dto.ws.MessageAddRelationRequest;
-import com.fzy.project.model.entity.Blog;
-import com.fzy.project.model.entity.Information;
 import com.fzy.project.model.entity.User;
 import com.fzy.project.model.vo.*;
 import com.fzy.project.service.UserService;
@@ -24,7 +19,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 用户接口

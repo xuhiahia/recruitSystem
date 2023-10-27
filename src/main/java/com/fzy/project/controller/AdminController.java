@@ -1,6 +1,6 @@
 package com.fzy.project.controller;
+
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.fzy.project.common.BaseResponse;
 import com.fzy.project.common.ErrorCode;
 import com.fzy.project.common.ResultUtils;
@@ -9,7 +9,6 @@ import com.fzy.project.model.dto.admin.AdminAddUserRequest;
 import com.fzy.project.model.dto.admin.AdminExamineRequest;
 import com.fzy.project.model.dto.blog.BlogCheckRequest;
 import com.fzy.project.model.dto.blog.BlogCommentCheckRequest;
-import com.fzy.project.model.dto.chief.ChiefCheckRequest;
 import com.fzy.project.model.dto.chief.ChiefQueryRequest;
 import com.fzy.project.model.dto.chief.ChiefStatusUpdateRequest;
 import com.fzy.project.model.dto.comment.CommentReportQueryRequest;
@@ -20,15 +19,11 @@ import com.fzy.project.model.dto.company.CompanyUpdateRequest;
 import com.fzy.project.model.dto.user.UserDeleteRequest;
 import com.fzy.project.model.dto.user.UserQueryRequest;
 import com.fzy.project.model.dto.user.UserUpdateRequest;
-
 import com.fzy.project.model.vo.*;
 import com.fzy.project.service.AdminsService;
-import com.fzy.project.service.BlogService;
-import org.apache.ibatis.executor.ResultExtractor;
 import org.springframework.web.bind.annotation.*;
-import javax.annotation.Resource;
-import javax.xml.transform.Result;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 import static com.fzy.project.constant.CommonConstant.PAGE;
